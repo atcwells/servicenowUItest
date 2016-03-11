@@ -1,0 +1,66 @@
+.opsdui-component {
+    border: 1px solid #dfdfdf;
+    box-shadow: 0px 1px 3px #515151;
+    border-radius: 5px;
+    padding: 5px;
+    display: inline-block;
+    width: 100%;
+    min-height: 40px;
+}
+
+opsdui-filter {
+    height: 30px;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: height 0.25s;
+    position: static;
+}
+
+opsdui-filter:hover {
+    cursor: pointer;
+    height: 150px;
+    transition: height 0.25s;
+    position: absolute;
+    z-index: 99;
+    background-color: #ffffff;
+}
+
+.opsdui-window {
+    min-width: 100%;
+    min-height: 150px;
+}
+
+.opsdui-filter > .header {
+    vertical-align: bottom;
+    line-height: 1.5;
+}
+
+opsdui-sea-card {
+    border: 1px solid grey;
+    box-shadow: 0px 1px 1px #515151;
+    border-radius: 3px;
+    margin: 2px;
+    height: 100px;
+    display: inline-block;
+    overflow: hidden;
+}
+
+opsdui-sea-card > a > div {
+    overflow: hidden;
+}
+
+opsdui-sea-card > a.selected {
+    box-shadow: 0px 0px 5px green !important;
+    background-color: aqua;
+}
+
+.selecting {
+    box-shadow: 0px 0px 5px red !important;
+}
+
+.select-helper {
+    position: absolute;
+    border: 1px dashed red;
+    background: red;
+    opacity: 0.2;
+}

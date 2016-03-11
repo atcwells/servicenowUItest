@@ -1,0 +1,38 @@
+{
+  "name": "ops-director-ui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "/src/app.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "build": "build_servicenow_client"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "1.2.2",
+    "angular-chart.js": "^0.8.8",
+    "angular-multiple-selection": "0.0.3"
+  },
+  "browserify": {
+    "transform": [
+      "ngify"
+    ]
+  },
+  "devDependencies": {
+    "ngify": "^1.4.1",
+    "servicenowify": "0.0.16"
+  },
+  "servicenowify": {
+    "name": "opsdui",
+    "sourcedir": "/src",
+    "distdir": "/dist",
+    "distfile": "deploy.js",
+    "jobs": [
+      "browserify",
+      "uglify"
+    ]
+  }
+}
