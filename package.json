@@ -12,7 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "angular": "1.2.2",
+    "angular": "1.4.9",
     "angular-chart.js": "^0.8.8",
     "angular-multiple-selection": "0.0.3"
   },
