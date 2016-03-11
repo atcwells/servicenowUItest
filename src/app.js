@@ -1,3 +1,5 @@
+var angular = require('angular')
+
 angular.module('ngify', []);
 
 angular.module('opsdui', ['multipleSelection', 'ngify', "chart.js"])

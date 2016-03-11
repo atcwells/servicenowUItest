@@ -11,9 +11,6 @@
             crossorigin="anonymous"></script>
     <!-- -->
     <!-- -->
-    <script language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-rc.2/angular.js" />
-    <script type="text/javascript" src="deploy.js"></script>
-    <!--<script type="text/javascript" src="https://ven01501.service-now.com/tesm_ng_api.do?command=getapiservices&api=opsd2api&payload={%22moduleName%22:%22opsdui%22}&version=v3"></script>-->
 </head>
 <body>
 <div id="opsdui-content" ng-app="opsdui" ng-controller="opsdui-controller" class="ui grid container">
@@ -61,6 +58,8 @@
         }(this));
     </script>
 </div>
+<script type="text/javascript" src="deploy.js"></script>
+<script type="text/javascript" src="https://ven01501.service-now.com/tesm_ng_api.do?command=getapiservices&api=opsd2api&payload={%22moduleName%22:%22opsdui%22}&version=v3"></script>
 <script>
 document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] +
 ':35729/livereload.js?snipver=1"></' + 'script>')
