@@ -1,0 +1,17 @@
+<a class="ui card"
+   href="#">
+    <div class="content">
+        <div class="header">{{card.u_number}}</div>
+        <div class="meta">
+            <span class="category">{{card.cmdb_ci}}</span>
+        </div>
+        <div class="description">
+            <p>{{card.u_short_description | truncTextFilter:true:20}}</p>
+        </div>
+    </div>
+    <div class="extra content">
+        <div class="right floated author">
+            <img class="ui avatar image" ng-src="{{card.assignedToImage}}">{{card.assignedTo}}
+        </div>
+    </div>
+</a>

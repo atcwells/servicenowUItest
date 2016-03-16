@@ -1,0 +1,9 @@
+<div>
+    <div multiple-selection-zone class="row">
+        <sea-card class="col-md-2" ng-repeat="card in seas"
+                  multiple-selection-item
+                  ng-class="{'selecting': isSelecting ,'selected': isSelected}"
+                  multiple-drag-item
+                  ng-class="{'dragging': isDragging}"></sea-card>
+    </div>
+</div>
