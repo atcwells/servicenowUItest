@@ -2,7 +2,7 @@
     window.__env = window.__env || {};
 
     // API url
-    window.__env.apiUrl = 'https://ven01501.service-now.com/tesm_ng_api.do';
+    window.__env.apiUrl = 'https://ven01247.service-now.com/tesm_ng_api.do';
     window.__env.apiVersion = 'stable';
     window.__env.apiCommands = {
         api: 'api'

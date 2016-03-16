@@ -1,51 +1,24 @@
-var angular = require('angular')
-
 angular.module('ngify', []);
 
-angular.module('opsdui', ['multipleSelection', 'ngify', "chart.js"])
-    .controller('opsdui-controller', ['$scope', 'PageLayoutService', '$timeout', function ($scope, PageLayoutService, $timeout) {
+module.exprts = opsdui = angular.module('opsdui', ['multipleSelection', 'multipleDrag', 'ngify', "chart.js"])
+    .controller('opsdui-controller', ['$scope', 'PageLayoutService', function ($scope, PageLayoutService) {
         $scope.page = PageLayoutService;
     }])
     .constant('__env', window.__env)
-    .config(['$provide', 'ChartJsProvider', function ($provide, ChartJsProvider) {
-        $provide.decorator('$log', ['$delegate', function ($delegate) {
-            var dateFormatter = function (date) {
-                var formatNum = function (num) {
-                    if (parseInt(num) && parseInt(num) < 10 && parseInt(num) > 0) {
-                        return '0' + num;
-                    }
-                    return num;
-                };
-                return date.getFullYear() + '-' + formatNum(date.getMonth()) + '-' + formatNum(date.getDay()) + ' ' + formatNum(date.getHours()) + ':' + formatNum(date.getMinutes()) + ':' + formatNum(date.getSeconds());
-            };
-            var debugFn = $delegate.debug;
-
-            $delegate.debug = function () {
-                var args = [].slice.call(arguments);
-                var now = dateFormatter(new Date());
-
-                // Prepend timestamp
-                args[0] = now + ' - ' + args[0];
-
-                // Call the original with the output prepended with formatted timestamp
-                debugFn.apply(null, args)
-            };
-
-            return $delegate;
-        }]);
-
+    .config(['ChartJsProvider', function (ChartJsProvider) {
         // Configure all charts
         ChartJsProvider.setOptions({
-            colours: ['#FF5252', '#FF8A80'],
-            responsive: false
+            responsive: false,
+            animation: false,
         });
         // Configure all line charts
         ChartJsProvider.setOptions('Line', {
-            datasetFill: false
+            datasetFill: true
         });
     }]);
 
 require('angular-multiple-selection');
+require('angular-multiple-drag');
 require('chart.js');
 require('angular-chart.js');
 require('./services');

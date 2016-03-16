@@ -1,9 +1,17 @@
 'use strict';
 var app = require('angular').module('opsdui');
 
-app.directive('opsduiFilter', require('./opsduiFilter/opsduiFilter'));
-app.directive('opsduiLineGraph', require('./opsduiLineGraph/opsduiLineGraph'));
-app.directive('opsduiOptions', require('./opsduiOptions/opsduiOptions'));
-app.directive('opsduiReportWindow', require('./opsduiReportWindow/opsduiReportWindow'));
-app.directive('opsduiSeaCard', require('./opsduiSeaCard/opsduiSeaCard'));
-app.directive('opsduiSeaWindow', require('./opsduiSeaWindow/opsduiSeaWindow'));
+// angular-chart directives, wrapped and extended a little
+app.directive('chartBar', require('./charts/chartBar/chartBar'));
+app.directive('chartDoughnut', require('./charts/chartDoughnut/chartDoughnut'));
+app.directive('chartLine', require('./charts/chartLine/chartLine'));
+app.directive('chartRadar', require('./charts/chartRadar/chartRadar'));
+app.directive('chartPie', require('./charts/chartPie/chartPie'));
+app.directive('chartPolar', require('./charts/chartPolar/chartPolar'));
+
+
+app.directive('options', require('./options/options'));
+app.directive('reportWindow', require('./reportWindow/reportWindow'));
+app.directive('seaCard', require('./seaCard/seaCard'));
+app.directive('seaFilter', require('./seaFilter/seaFilter'));
+app.directive('seaWindow', require('./seaWindow/seaWindow'));

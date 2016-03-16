@@ -10,10 +10,11 @@
     "build": "build_servicenow_client"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "angular": "1.2.2",
     "angular-chart.js": "^0.8.8",
+    "angular-multiple-drag": "0.0.1",
     "angular-multiple-selection": "0.0.3"
   },
   "browserify": {
@@ -23,7 +24,7 @@
   },
   "devDependencies": {
     "ngify": "^1.4.1",
-    "servicenowify": "0.0.16"
+    "servicenowify": "0.0.19"
   },
   "servicenowify": {
     "name": "opsdui",
